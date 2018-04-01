@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="/fileUpload">
+    <!--<input type="file" name="imageFile"/>
+    <input type="file" name="imageFile2"/>-->
+    <input multiple="multiple" type="file" name="imageFile[]" />
+    <input type="submit" value="업로드" name="submit"/>
+</form>
+</body>
+</html>

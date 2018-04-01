@@ -1,0 +1,13 @@
+// express 객체 생성
+const app = express();
+// 오류 핸들러 객체 생성
+var expressErrorHandler = require('express-error-handler');
+
+var errorHandler =  expressErrorHandler({
+    static : {
+        '404': './html/error.html'
+    }
+});
+
+app.use( expressErrorHandler.httpError(404));
+app.use(errorHandler);
